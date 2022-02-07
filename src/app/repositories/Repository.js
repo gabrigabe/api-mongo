@@ -10,6 +10,10 @@ class Repository {
   async findAll() {
     return this.schema.find();
   }
+
+  async findOne(id) {
+    return this.schema.findById(id);
+  }
 }
 
 module.exports = Repository;
