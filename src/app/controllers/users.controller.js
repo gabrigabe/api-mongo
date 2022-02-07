@@ -1,6 +1,9 @@
+const UsersRepository = require('../repositories/UsersRepository');
+
 class UsersController {
-  teste(req, res) {
-    res.send('Hey');
+  async create(req, res) {
+    const teste = await UsersRepository.create(req.body);
+    return res.status(201).json(teste);
   }
 }
 
